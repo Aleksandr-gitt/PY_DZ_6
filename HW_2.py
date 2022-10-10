@@ -7,7 +7,8 @@
 
 def res(num):
     ls = [i for i in range(20, num)]
-    res = [ls[j] for j in range(len(ls)-1) if ls[j] % 20 == 0 or ls[j] % 21 == 0]
+    # res = [ls[j] for j in range(len(ls)-1) if ls[j] % 20 == 0 or ls[j] % 21 == 0]
+    res = list(filter(lambda x: not x%20 or not x%21, ls))
     return res
 
 print(res(int(input('Введите число (100....1000): '))))

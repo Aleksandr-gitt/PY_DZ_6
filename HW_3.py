@@ -14,8 +14,10 @@ def res(ls):
         # for i in ls:
         #     if str(i[0]) == j:
         #         lss.append(i)
-        lss = [i for i in ls if str(i[0]) == j]
-        res[j] = lss
+        # lss = [i for i in ls if str(i[0]) == j]
+        ## lss = list(filter(lambda i: str(i[0]) == j, ls))
+        # res[j] = lss
+        res[j] = list(filter(lambda i: str(i[0]) == j, ls))
         lss = []
     return res
 
